@@ -7,6 +7,7 @@
 ### File: [example.docx]
 
 <hr/>
+
 ## Architecture
 
 ### Max marks: 3
