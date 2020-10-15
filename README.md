@@ -1,27 +1,27 @@
-### Deliverables
-`
-# Requirements
-`
+# Deliverables
 
-`
-# Architecture
-`
+### Requirements
 
-`
-# Method selection & planning
-`
 
-`
-# Risk assessment & mitigation
-`
 
-`
-# Implementation
-`
+### Architecture
 
-`
-# Optional self-assessment table
-`
+
+
+### Method selection & planning
+
+
+
+### Risk assessment & mitigation
+
+
+
+### Implementation
+
+
+
+### Optional self-assessment table
+
 
 
 ```markdown
