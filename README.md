@@ -1,10 +1,16 @@
 ## Deliverables
 - Requirements
+`URL`
 - Architecture
+`URL`
 - Method selection & planning
+`URL`
 - Risk assessment & mitigation
+`URL`
 - Implementation
+`URL`
 - Optional self-assessment table
+`URL`
 
 
 ```markdown
