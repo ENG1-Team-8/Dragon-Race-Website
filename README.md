@@ -6,8 +6,7 @@
 ### Page limit: 1 + 3
 ### File: [example.docx]
 
-\pagebreak
-
+<hr/>
 ## Architecture
 
 ### Max marks: 3
