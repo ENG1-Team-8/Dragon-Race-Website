@@ -1,26 +1,33 @@
 # Deliverables
 
-### Requirements
+## Requirements
+```
+### Max marks
+3
+### Page limit
+1 + 3
+### File
+example.docx
+```
+
+
+## Architecture
 
 
 
-### Architecture
+## Method selection & planning
 
 
 
-### Method selection & planning
+## Risk assessment & mitigation
 
 
 
-### Risk assessment & mitigation
+## Implementation
 
 
 
-### Implementation
-
-
-
-### Optional self-assessment table
+## Optional self-assessment table
 
 
 
