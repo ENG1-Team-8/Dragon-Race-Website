@@ -3,6 +3,7 @@
 ## Requirements
 
 ### File: [example.docx]
+### Questions: [Here](https://docs.google.com/document/d/1K8ctMNHmA0QFwXYlLXaQmM2YWSM_RFjk9n0VZDvCyvI/edit)
 
 <hr/>
 
@@ -15,6 +16,7 @@
 ## Method selection & planning
 
 ### File: [example.docx]
+### Plan: [Here](https://docs.google.com/spreadsheets/d/1mw9rbE06QBHJ9krdqzoX1RuODPQSkrqjEupl5D4aKyo/edit#gid=0)
 
 <hr/>
 
@@ -27,6 +29,7 @@
 ## Implementation
 
 ### File: [example.docx]
+### Repository: [Here](https://github.com/ENG1-Team-8/Dragon-Race)
 
 <hr/>
 
