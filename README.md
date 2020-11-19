@@ -28,7 +28,7 @@
 
 ## Implementation
 
-### File: [example.docx]
+### JAR: [example.docx]
 ### Repository: [Here](https://github.com/ENG1-Team-8/Dragon-Race)
 
 <hr/>
@@ -36,23 +36,5 @@
 ## Optional self-assessment table
 
 ### File: [example.docx]
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
 
 
