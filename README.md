@@ -2,7 +2,7 @@
 
 ## Requirements
 
-### File: [example.docx]
+### File: [Requirements](Requirements.pdf)
 ### Questions: [Here](https://docs.google.com/document/d/1K8ctMNHmA0QFwXYlLXaQmM2YWSM_RFjk9n0VZDvCyvI/edit)
 
 <hr/>
@@ -22,7 +22,7 @@
 
 ## Risk assessment & mitigation
 
-### File: [example.docx]
+### File: [Risk Assessment](RiskAssessment.pdf)
 
 <hr/>
 
