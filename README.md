@@ -29,7 +29,7 @@
 ## Implementation
 
 ### JAR: [example.docx]
-### Documentation: [Here](https://eng1-team-8.github.io/Dragon-Race-Website/javadoc)
+### Documentation: [Here](javadoc/index.html)
 ### Repository: [Here](https://github.com/ENG1-Team-8/Dragon-Race)
 
 <hr/>
