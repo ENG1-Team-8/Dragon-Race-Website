@@ -140,11 +140,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Obstacle</span>
 extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace">MovingObject</a></pre>
-<div class="block">An obstacle within the game, extends MovingObject</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="MovingObject.html" title="class in com.the8team.dragonboatrace"><code>MovingObject</code></a></dd>
-</dl>
+<div class="block">An obstacle, extended from MovingObject.</div>
 </li>
 </ul>
 </div>
@@ -208,8 +204,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
         com.badlogic.gdx.physics.box2d.World&nbsp;world,
         java.lang.String&nbsp;textureFile)</code></th>
 <td class="colLast">
-<div class="block">Should be used as a super constructor for obstacle types, or as a generic
- obstacle</div>
+<div class="block">Construct an obstacle.</div>
 </td>
 </tr>
 </table>
@@ -235,7 +230,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOffScreen(int)">isOffScreen</a></span>&#8203;(int&nbsp;playerX)</code></th>
 <td class="colLast">
 <div class="block">Function to check if obstacle has left the boundaries of the screen behind
- the player and returns a boolean result</div>
+ the player and returns a boolean result.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -243,7 +238,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reinstantiate(int)">reinstantiate</a></span>&#8203;(int&nbsp;playerX)</code></th>
 <td class="colLast">
 <div class="block">Reinstantiate function that sets position of obstacle based on position of
- player</div>
+ player.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -251,28 +246,28 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reinstantiate(int,int)">reinstantiate</a></span>&#8203;(int&nbsp;x,
              int&nbsp;y)</code></th>
 <td class="colLast">
-<div class="block">Reinstantiate function that takes parameters for position of moved obstacle</div>
+<div class="block">Reinstantiate function that takes parameters for position of moved obstacle.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHorizontalVel(int)">setHorizontalVel</a></span>&#8203;(int&nbsp;vel)</code></th>
 <td class="colLast">
-<div class="block">Updates horizontal velocity</div>
+<div class="block">Updates horizontal velocity.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setVerticalVel(int)">setVerticalVel</a></span>&#8203;(int&nbsp;vel)</code></th>
 <td class="colLast">
-<div class="block">Updates vertical veolcity</div>
+<div class="block">Updates vertical veolcity.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMovement()">updateMovement</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Sets a linear velocity using the obstacles horiontal and vertical velocity</div>
+<div class="block">Update the movement of the obstacle with the velocities.</div>
 </td>
 </tr>
 </table>
@@ -281,7 +276,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.the8team.dragonboatrace.<a href="MovingObject.html" title="class in com.the8team.dragonboatrace">MovingObject</a></h3>
-<code><a href="MovingObject.html#draw(com.badlogic.gdx.graphics.g2d.Batch)">draw</a>, <a href="MovingObject.html#getPosition()">getPosition</a>, <a href="MovingObject.html#removeCollision()">removeCollision</a></code></li>
+<code><a href="MovingObject.html#draw(com.badlogic.gdx.graphics.g2d.Batch)">draw</a>, <a href="MovingObject.html#getBody()">getBody</a>, <a href="MovingObject.html#getPosition()">getPosition</a>, <a href="MovingObject.html#removeCollision()">removeCollision</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -358,23 +353,18 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
                 int&nbsp;height,
                 com.badlogic.gdx.physics.box2d.World&nbsp;world,
                 java.lang.String&nbsp;textureFile)</pre>
-<div class="block">Should be used as a super constructor for obstacle types, or as a generic
- obstacle</div>
+<div class="block">Construct an obstacle.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>horizontalVelocity</code> - The horizontal velocity of the obstacle</dd>
 <dd><code>verticalVelocity</code> - The vertical velocity of the obstacle</dd>
-<dd><code>damageDealt</code> - The damage to be taken from a boat's health on
-                           collision</dd>
+<dd><code>damageDealt</code> - How much damage it can deal</dd>
 <dd><code>x</code> - The starting x coordinate</dd>
 <dd><code>y</code> - The starting y coordinate</dd>
-<dd><code>width</code> - The width of the obstacle</dd>
-<dd><code>height</code> - The height of the obstacle</dd>
-<dd><code>world</code> - The world to create the obstacle in</dd>
-<dd><code>textureFile</code> - The texture/sprite of the obstacle</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="Goose.html" title="class in com.the8team.dragonboatrace"><code>Goose</code></a>, 
-<a href="Branch.html" title="class in com.the8team.dragonboatrace"><code>Branch</code></a></dd>
+<dd><code>width</code> - The width</dd>
+<dd><code>height</code> - The height</dd>
+<dd><code>world</code> - The world in which to create the obstacle</dd>
+<dd><code>textureFile</code> - The texture path for the obstacle</dd>
 </dl>
 </li>
 </ul>
@@ -395,7 +385,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>setHorizontalVel</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setHorizontalVel&#8203;(int&nbsp;vel)</pre>
-<div class="block">Updates horizontal velocity</div>
+<div class="block">Updates horizontal velocity.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>vel</code> - The velocity value to set</dd>
@@ -409,7 +399,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>setVerticalVel</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setVerticalVel&#8203;(int&nbsp;vel)</pre>
-<div class="block">Updates vertical veolcity</div>
+<div class="block">Updates vertical veolcity.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>vel</code> - The velocity value to set</dd>
@@ -423,7 +413,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>updateMovement</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateMovement()</pre>
-<div class="block">Sets a linear velocity using the obstacles horiontal and vertical velocity</div>
+<div class="block">Update the movement of the obstacle with the velocities.</div>
 </li>
 </ul>
 <a id="isOffScreen(int)">
@@ -434,12 +424,12 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <h4>isOffScreen</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isOffScreen&#8203;(int&nbsp;playerX)</pre>
 <div class="block">Function to check if obstacle has left the boundaries of the screen behind
- the player and returns a boolean result</div>
+ the player and returns a boolean result.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>playerX</code> - The x coordinate of the player</dd>
+<dd><code>playerX</code> - The player's x coordinate</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if obstacle has left the player's view, false otherwise</dd>
+<dd>true if offscreen, false otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -451,11 +441,11 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <h4>reinstantiate</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;reinstantiate&#8203;(int&nbsp;x,
                           int&nbsp;y)</pre>
-<div class="block">Reinstantiate function that takes parameters for position of moved obstacle</div>
+<div class="block">Reinstantiate function that takes parameters for position of moved obstacle.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>x</code> - The new x coordinate</dd>
-<dd><code>y</code> - The new y coordinate</dd>
+<dd><code>x</code> - The x coordinate to move to</dd>
+<dd><code>y</code> - The y coordinate to move to</dd>
 </dl>
 </li>
 </ul>
@@ -467,7 +457,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <h4>reinstantiate</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;reinstantiate&#8203;(int&nbsp;playerX)</pre>
 <div class="block">Reinstantiate function that sets position of obstacle based on position of
- player</div>
+ player.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>playerX</code> - The player's x coordinate</dd>

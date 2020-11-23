@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -87,7 +87,7 @@ loadScripts(document, 'script');</script>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
@@ -121,7 +121,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li>com.badlogic.gdx.ApplicationAdapter</li>
+<li>com.badlogic.gdx.Game</li>
 <li>
 <ul class="inheritance">
 <li>com.the8team.dragonboatrace.DragonBoatRace</li>
@@ -139,13 +139,30 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">DragonBoatRace</span>
-extends com.badlogic.gdx.ApplicationAdapter</pre>
+extends com.badlogic.gdx.Game</pre>
 </li>
 </ul>
 </div>
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a id="fields.inherited.from.class.com.badlogic.gdx.Game">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;com.badlogic.gdx.Game</h3>
+<code>screen</code></li>
+</ul>
+</li>
+</ul>
+</section>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <section role="region">
 <ul class="blockList">
@@ -190,7 +207,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#dispose()">dispose</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Disposes of objects for efficiency</div>
+<div class="block">Disposes of objects for efficiency.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -202,60 +219,72 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reset()">reset</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Reset the player, opponents and obstacles</div>
+<div class="block">Reset the player, opponents and obstacles.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetObstacles()">resetObstacles</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Resets the obstacles in the game world</div>
+<div class="block">Resets the obstacles in the game world.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#update(float)">update</a></span>&#8203;(float&nbsp;delta)</code></th>
 <td class="colLast">
-<div class="block">Updates the game logic</div>
+<div class="block">Updates the game logic.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateCamera(float)">updateCamera</a></span>&#8203;(float&nbsp;delta)</code></th>
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateBroken()">updateBroken</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Updates the camera
- 
- Tracks the players x-position and keeps the full height of the map in frame</div>
+<div class="block">Displays the broken boat graphic if the player's boat has broken.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateCollisionBodies()">updateCollisionBodies</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateCamera()">updateCamera</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Remove physics bodies for each object in the toDelete list</div>
+<div class="block">Updates the camera.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLeg(float)">updateLeg</a></span>&#8203;(float&nbsp;timer)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateCollisionBodies()">updateCollisionBodies</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Check if all boats have reached the finish line and updates leg accordingly</div>
+<div class="block">Remove physics bodies for each object in the toDelete list.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateFinished()">updateFinished</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Check if the race has finished.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateLeg(float)">updateLeg</a></span>&#8203;(float&nbsp;timer)</code></th>
+<td class="colLast">
+<div class="block">Check if all boats have reached the finish line and updates leg accordingly.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateUI()">updateUI</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Update ui elements</div>
+<div class="block">Update ui elements.</div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.com.badlogic.gdx.ApplicationAdapter">
+<li class="blockList"><a id="methods.inherited.from.class.com.badlogic.gdx.Game">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;com.badlogic.gdx.ApplicationAdapter</h3>
-<code>pause, resize, resume</code></li>
+<h3>Methods inherited from class&nbsp;com.badlogic.gdx.Game</h3>
+<code>getScreen, pause, resize, resume, setScreen</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -306,12 +335,6 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>create</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;create()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code>create</code>&nbsp;in interface&nbsp;<code>com.badlogic.gdx.ApplicationListener</code></dd>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>create</code>&nbsp;in class&nbsp;<code>com.badlogic.gdx.ApplicationAdapter</code></dd>
-</dl>
 </li>
 </ul>
 <a id="reset()">
@@ -321,7 +344,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>reset</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;reset()</pre>
-<div class="block">Reset the player, opponents and obstacles</div>
+<div class="block">Reset the player, opponents and obstacles.</div>
 </li>
 </ul>
 <a id="render()">
@@ -335,7 +358,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>render</code>&nbsp;in interface&nbsp;<code>com.badlogic.gdx.ApplicationListener</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>render</code>&nbsp;in class&nbsp;<code>com.badlogic.gdx.ApplicationAdapter</code></dd>
+<dd><code>render</code>&nbsp;in class&nbsp;<code>com.badlogic.gdx.Game</code></dd>
 </dl>
 </li>
 </ul>
@@ -346,27 +369,23 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>update</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;update&#8203;(float&nbsp;delta)</pre>
-<div class="block">Updates the game logic</div>
+<div class="block">Updates the game logic.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>delta</code> - The delta time between frames</dd>
 </dl>
 </li>
 </ul>
-<a id="updateCamera(float)">
+<a id="updateCamera()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>updateCamera</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;updateCamera&#8203;(float&nbsp;delta)</pre>
-<div class="block">Updates the camera
- 
- Tracks the players x-position and keeps the full height of the map in frame</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>delta</code> - The delta time between frames</dd>
-</dl>
+<pre class="methodSignature">public&nbsp;void&nbsp;updateCamera()</pre>
+<div class="block">Updates the camera.
+ <p>
+ Tracks the players x-position and keeps the full height of the map in frame.</div>
 </li>
 </ul>
 <a id="updateUI()">
@@ -376,7 +395,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>updateUI</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateUI()</pre>
-<div class="block">Update ui elements</div>
+<div class="block">Update ui elements.</div>
 </li>
 </ul>
 <a id="updateCollisionBodies()">
@@ -386,10 +405,10 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>updateCollisionBodies</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateCollisionBodies()</pre>
-<div class="block">Remove physics bodies for each object in the toDelete list
+<div class="block">Remove physics bodies for each object in the toDelete list.
  <p>
  This method is required so that bodies are modified on world step, avoiding
- bugs and crashes</div>
+ bugs and crashes.</div>
 </li>
 </ul>
 <a id="updateLeg(float)">
@@ -399,7 +418,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>updateLeg</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateLeg&#8203;(float&nbsp;timer)</pre>
-<div class="block">Check if all boats have reached the finish line and updates leg accordingly</div>
+<div class="block">Check if all boats have reached the finish line and updates leg accordingly.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timer</code> - The current leg time</dd>
@@ -413,7 +432,35 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>resetObstacles</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;resetObstacles()</pre>
-<div class="block">Resets the obstacles in the game world</div>
+<div class="block">Resets the obstacles in the game world.</div>
+</li>
+</ul>
+<a id="updateFinished()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateFinished</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;updateFinished()</pre>
+<div class="block">Check if the race has finished.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if race has finished, false otherwise</dd>
+</dl>
+</li>
+</ul>
+<a id="updateBroken()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>updateBroken</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;updateBroken()</pre>
+<div class="block">Displays the broken boat graphic if the player's boat has broken.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if broken screen is showing, false otherwise</dd>
+</dl>
 </li>
 </ul>
 <a id="dispose()">
@@ -423,12 +470,12 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <li class="blockList">
 <h4>dispose</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;dispose()</pre>
-<div class="block">Disposes of objects for efficiency</div>
+<div class="block">Disposes of objects for efficiency.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code>dispose</code>&nbsp;in interface&nbsp;<code>com.badlogic.gdx.ApplicationListener</code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>dispose</code>&nbsp;in class&nbsp;<code>com.badlogic.gdx.ApplicationAdapter</code></dd>
+<dd><code>dispose</code>&nbsp;in class&nbsp;<code>com.badlogic.gdx.Game</code></dd>
 </dl>
 </li>
 </ul>
@@ -483,7 +530,7 @@ extends com.badlogic.gdx.ApplicationAdapter</pre>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>

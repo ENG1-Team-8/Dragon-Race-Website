@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -140,7 +140,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Boat</span>
 extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace">MovingObject</a></pre>
-<div class="block">A boat entity extended from MovingObject</div>
+<div class="block">A boat entity extended from MovingObject.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MovingObject.html" title="class in com.the8team.dragonboatrace"><code>MovingObject</code></a></dd>
@@ -173,9 +173,9 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
     float&nbsp;acceleration,
     float&nbsp;maneuverability,
     com.badlogic.gdx.physics.box2d.World&nbsp;world,
-    java.lang.String&nbsp;textureFile)</code></th>
+    java.lang.String&nbsp;name)</code></th>
 <td class="colLast">
-<div class="block">Constructs a boat object</div>
+<div class="block">Constructs a boat object.</div>
 </td>
 </tr>
 </table>
@@ -197,47 +197,82 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inLane()">inLane</a></span>()</code></th>
+<td class="colFirst"><code>float</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFastestTime()">getFastestTime</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Checks if the boat is within its lane</div>
+<div class="block">A getter for the boat's fastest time.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFinished(float)">isFinished</a></span>&#8203;(float&nbsp;timer)</code></th>
+<td class="colFirst"><code>java.lang.String</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Checks if the boat has finished the race</div>
+<div class="block">A getter for the name of the boat.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#inLane()">inLane</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Checks if the boat is within its lane.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBroken()">isBroken</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Check if the boat is broken.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFinished(float)">isFinished</a></span>&#8203;(float&nbsp;timer)</code></th>
+<td class="colLast">
+<div class="block">Checks if the boat has finished the race.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reset()">reset</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Resets the boat to its initial position, stamina and health.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#resetFastestTime()">resetFastestTime</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Resets the fastest time to 1000f.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBroken(boolean)">setBroken</a></span>&#8203;(boolean&nbsp;broken)</code></th>
+<td class="colLast">
+<div class="block">A setter for objects broken value.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateHealth(int)">updateHealth</a></span>&#8203;(int&nbsp;damage)</code></th>
 <td class="colLast">
-<div class="block">Updates the boat's health</div>
+<div class="block">Updates the boat's health.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateMovement(int,int,float)">updateMovement</a></span>&#8203;(int&nbsp;horizontalForce,
               int&nbsp;verticalForce,
               float&nbsp;delta)</code></th>
 <td class="colLast">
-<div class="block">Updates the movement properties of the boat</div>
+<div class="block">Updates the movement properties of the boat.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#updateStamina()">updateStamina</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Updates the boat's stamina based on it's speed</div>
+<div class="block">Updates the boat's stamina based on it's speed.</div>
 </td>
 </tr>
 </table>
@@ -246,7 +281,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.the8team.dragonboatrace.<a href="MovingObject.html" title="class in com.the8team.dragonboatrace">MovingObject</a></h3>
-<code><a href="MovingObject.html#draw(com.badlogic.gdx.graphics.g2d.Batch)">draw</a>, <a href="MovingObject.html#getPosition()">getPosition</a>, <a href="MovingObject.html#removeCollision()">removeCollision</a></code></li>
+<code><a href="MovingObject.html#draw(com.badlogic.gdx.graphics.g2d.Batch)">draw</a>, <a href="MovingObject.html#getBody()">getBody</a>, <a href="MovingObject.html#getPosition()">getPosition</a>, <a href="MovingObject.html#removeCollision()">removeCollision</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -285,8 +320,8 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
             float&nbsp;acceleration,
             float&nbsp;maneuverability,
             com.badlogic.gdx.physics.box2d.World&nbsp;world,
-            java.lang.String&nbsp;textureFile)</pre>
-<div class="block">Constructs a boat object
+            java.lang.String&nbsp;name)</pre>
+<div class="block">Constructs a boat object.
  <p>
  Takes a world object to create a box2d body within the world and store
  relevant characteristics.</div>
@@ -300,7 +335,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <dd><code>acceleration</code> - The boat's acceleration</dd>
 <dd><code>maneuverability</code> - How quickly the boat can move side to side</dd>
 <dd><code>world</code> - The world in which to create the boat</dd>
-<dd><code>textureFile</code> - The texture location</dd>
+<dd><code>name</code> - The name of the boat to select</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="Player.html" title="class in com.the8team.dragonboatrace"><code>Player</code></a>, 
 <a href="Opponent.html" title="class in com.the8team.dragonboatrace"><code>Opponent</code></a></dd>
@@ -326,13 +361,13 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <pre class="methodSignature">public&nbsp;void&nbsp;updateMovement&#8203;(int&nbsp;horizontalForce,
                            int&nbsp;verticalForce,
                            float&nbsp;delta)</pre>
-<div class="block">Updates the movement properties of the boat
+<div class="block">Updates the movement properties of the boat.
  <p>
  The forces take values 1 or 0 typically to represent whether or not a force
  is being applied.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>horizontalForce</code> - Whether the boat is undergoing horuzontal force (-1
+<dd><code>horizontalForce</code> - Whether the boat is undergoing horizontal force (-1
                         left, 1 right)</dd>
 <dd><code>verticalForce</code> - Whether the boat is undergoing vertical force (-1
                         down, 1 up)</dd>
@@ -347,7 +382,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>inLane</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;inLane()</pre>
-<div class="block">Checks if the boat is within its lane</div>
+<div class="block">Checks if the boat is within its lane.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if in lane, false otherwise</dd>
@@ -361,10 +396,10 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>updateHealth</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateHealth&#8203;(int&nbsp;damage)</pre>
-<div class="block">Updates the boat's health
+<div class="block">Updates the boat's health.
  <p>
  Subtracts the damage taken from the boat's health and sets broken=true if
- health less than or equal to 0</div>
+ health less than or equal to 0.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>damage</code> - The damage to apply</dd>
@@ -378,7 +413,7 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>updateStamina</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;updateStamina()</pre>
-<div class="block">Updates the boat's stamina based on it's speed</div>
+<div class="block">Updates the boat's stamina based on it's speed.</div>
 </li>
 </ul>
 <a id="isFinished(float)">
@@ -388,9 +423,9 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <li class="blockList">
 <h4>isFinished</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFinished&#8203;(float&nbsp;timer)</pre>
-<div class="block">Checks if the boat has finished the race
+<div class="block">Checks if the boat has finished the race.
  <p>
- Compares boat's x position to the position of the finish line</div>
+ Compares boat's x position to the position of the finish line.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timer</code> - The current leg's time</dd>
@@ -402,11 +437,77 @@ extends <a href="MovingObject.html" title="class in com.the8team.dragonboatrace"
 <a id="reset()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>reset</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;reset()</pre>
 <div class="block">Resets the boat to its initial position, stamina and health. Zeros speed.</div>
+</li>
+</ul>
+<a id="setBroken(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBroken</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBroken&#8203;(boolean&nbsp;broken)</pre>
+<div class="block">A setter for objects broken value.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>broken</code> - The boolean to set broken to</dd>
+</dl>
+</li>
+</ul>
+<a id="isBroken()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBroken</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isBroken()</pre>
+<div class="block">Check if the boat is broken.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if boat is broken, false if otherwise</dd>
+</dl>
+</li>
+</ul>
+<a id="getFastestTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getFastestTime</h4>
+<pre class="methodSignature">public&nbsp;float&nbsp;getFastestTime()</pre>
+<div class="block">A getter for the boat's fastest time.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>Float of fastest time</dd>
+</dl>
+</li>
+</ul>
+<a id="resetFastestTime()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>resetFastestTime</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;resetFastestTime()</pre>
+<div class="block">Resets the fastest time to 1000f.</div>
+</li>
+</ul>
+<a id="getName()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getName</h4>
+<pre class="methodSignature">public&nbsp;java.lang.String&nbsp;getName()</pre>
+<div class="block">A getter for the name of the boat.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>String of the boat's name</dd>
+</dl>
 </li>
 </ul>
 </li>

@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -130,12 +130,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="Boat.html" title="class in com.the8team.dragonboatrace">Boat</a></code>, <code><a href="Obstacle.html" title="class in com.the8team.dragonboatrace">Obstacle</a></code></dd>
+<dd><code><a href="Boat.html" title="class in com.the8team.dragonboatrace">Boat</a></code>, <code><a href="Obstacle.html" title="class in com.the8team.dragonboatrace">Obstacle</a></code>, <code><a href="TargetableObject.html" title="class in com.the8team.dragonboatrace">TargetableObject</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">MovingObject</span>
 extends java.lang.Object</pre>
-<div class="block">An instance of a moving object (parent of Boat and Obstacle)</div>
+<div class="block">An instance of a moving object (parent of Boat and Obstacle).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="Boat.html" title="class in com.the8team.dragonboatrace"><code>Boat</code></a>, 
@@ -169,7 +169,7 @@ extends java.lang.Object</pre>
             java.lang.String&nbsp;textureFile)</code></th>
 <td class="colLast">
 <div class="block">Should be used as a super constructor for objects in the game or a generic
- moving object</div>
+ moving object.</div>
 </td>
 </tr>
 </table>
@@ -194,21 +194,28 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#draw(com.badlogic.gdx.graphics.g2d.Batch)">draw</a></span>&#8203;(com.badlogic.gdx.graphics.g2d.Batch&nbsp;batch)</code></th>
 <td class="colLast">
-<div class="block">Draws the sprite for the object on screen</div>
+<div class="block">Draws the sprite for the object on screen.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>com.badlogic.gdx.math.Vector2</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPosition()">getPosition</a></span>()</code></th>
+<td class="colFirst"><code>com.badlogic.gdx.physics.box2d.Body</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBody()">getBody</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Gets the current position of the object</div>
+<div class="block">Returns the object's body.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>com.badlogic.gdx.math.Vector2</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPosition()">getPosition</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Gets the current position of the object.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeCollision()">removeCollision</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Destroys the objects body to remove from the game world and its collision</div>
+<div class="block">Destroys the objects body to remove from the game world and its collision.</div>
 </td>
 </tr>
 </table>
@@ -248,7 +255,7 @@ extends java.lang.Object</pre>
                     com.badlogic.gdx.physics.box2d.World&nbsp;world,
                     java.lang.String&nbsp;textureFile)</pre>
 <div class="block">Should be used as a super constructor for objects in the game or a generic
- moving object</div>
+ moving object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>x</code> - The starting x coordinate</dd>
@@ -277,7 +284,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>draw</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;draw&#8203;(com.badlogic.gdx.graphics.g2d.Batch&nbsp;batch)</pre>
-<div class="block">Draws the sprite for the object on screen</div>
+<div class="block">Draws the sprite for the object on screen.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>batch</code> - The spritebatch in which to draw the sprite</dd>
@@ -291,10 +298,24 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getPosition</h4>
 <pre class="methodSignature">public&nbsp;com.badlogic.gdx.math.Vector2&nbsp;getPosition()</pre>
-<div class="block">Gets the current position of the object</div>
+<div class="block">Gets the current position of the object.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>Position of object</dd>
+</dl>
+</li>
+</ul>
+<a id="getBody()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBody</h4>
+<pre class="methodSignature">public&nbsp;com.badlogic.gdx.physics.box2d.Body&nbsp;getBody()</pre>
+<div class="block">Returns the object's body.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The object's body</dd>
 </dl>
 </li>
 </ul>
@@ -305,7 +326,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>removeCollision</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;removeCollision()</pre>
-<div class="block">Destroys the objects body to remove from the game world and its collision</div>
+<div class="block">Destroys the objects body to remove from the game world and its collision.</div>
 </li>
 </ul>
 </li>
