@@ -3,7 +3,6 @@
 ## Requirements
 
 ### File: [Requirements](Requirements.pdf)
-### Questions: [Here](https://docs.google.com/document/d/1K8ctMNHmA0QFwXYlLXaQmM2YWSM_RFjk9n0VZDvCyvI/edit)
 
 <hr/>
 
