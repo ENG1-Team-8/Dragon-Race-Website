@@ -28,7 +28,7 @@
 
 ## Implementation
 
-### JAR: [example.docx]
+### JAR: [Here](Dragon-Boat-Race.jar)
 ### Documentation: [Here](javadoc/index.html)
 ### Repository: [Here](https://github.com/ENG1-Team-8/Dragon-Race)
 
