@@ -2,7 +2,7 @@
 
 ## Requirements
 
-### File: [Requirements](Requirements.pdf)
+### File: [Requirements](deliverables/Req1.pdf)
 
 <hr/>
 
@@ -21,7 +21,7 @@
 
 ## Risk assessment & mitigation
 
-### File: [Risk Assessment](RiskAssessment.pdf)
+### File: [Risk Assessment](deliverables/Risk1.pdf)
 
 <hr/>
 
