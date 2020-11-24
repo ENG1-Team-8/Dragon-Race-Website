@@ -15,7 +15,7 @@
 ## Method selection & planning
 
 ### File: [Method selection and planning](deliverables/Plan1.pdf)
-### Plan: [Here](plan/plan.md)
+### Weekly Plan Snapshots: [Here](plan/plan.md)
 
 <hr/>
 
