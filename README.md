@@ -8,13 +8,13 @@
 
 ## Architecture
 
-### File: [example.docx]
+### File: [Architecture](deliverables/Arch1.pdf)
 
 <hr/>
 
 ## Method selection & planning
 
-### File: [example.docx]
+### File: [Method selection and planning](deliverables/Plan1.pdf)
 ### Plan: [Here](plan/plan.md)
 
 <hr/>
@@ -27,6 +27,7 @@
 
 ## Implementation
 
+### Deliverable: [Implementation (b)](deliverables/Impl1.pdf)
 ### Game: [JAR](Dragon-Boat-Race.jar)
 ### Documentation: [Javadocs](javadoc/index.html)
 ### Repository: [Here](https://github.com/ENG1-Team-8/Dragon-Race)
@@ -35,6 +36,6 @@
 
 ## Self-assessment table
 
-### File: [example.docx]
+### File: [Self-assessment](deliverables/SelfAss1.pdf)
 
 
